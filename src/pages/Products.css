@@ -1,0 +1,122 @@
+.products-topbar {
+  background: var(--dark2);
+  border-bottom: var(--border);
+  padding: 24px 0;
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.topbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  background: var(--dark3);
+  border: var(--border);
+  color: var(--white);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-family: var(--font-body);
+  outline: none;
+  width: 220px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus { border-color: var(--gold); }
+.search-input::placeholder { color: var(--gray2); }
+
+.filter-bar {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.filter-bar.open {
+  max-height: 300px;
+  padding-top: 20px;
+}
+
+.filter-group { margin-bottom: 16px; }
+
+.filter-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: var(--dark3);
+  border: var(--border);
+  color: var(--white2);
+  padding: 6px 14px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+
+.chip:hover { border-color: var(--gold); color: var(--gold); }
+.chip.active { background: var(--gold); color: var(--black); border-color: var(--gold); }
+
+.no-products {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--gray);
+}
+
+.filter-toggle { display: none; }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 48px;
+}
+
+.page-btn {
+  width: 40px; height: 40px;
+  background: var(--dark3);
+  border: var(--border);
+  color: var(--white);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-btn:hover { border-color: var(--gold); color: var(--gold); }
+.page-btn.active { background: var(--gold); color: var(--black); border-color: var(--gold); font-weight: 700; }
+
+@media (max-width: 768px) {
+  .filter-toggle { display: flex; }
+  .search-input { width: 100%; }
+  .topbar-controls { width: 100%; }
+}

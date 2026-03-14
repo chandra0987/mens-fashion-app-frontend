@@ -1,0 +1,129 @@
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 32px;
+  align-items: start;
+}
+
+.cart-items { display: flex; flex-direction: column; gap: 16px; }
+
+.cart-item {
+  background: var(--dark2);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  transition: border-color 0.3s;
+  position: relative;
+}
+
+.cart-item:hover { border-color: rgba(201,168,76,0.3); }
+
+.cart-item-img {
+  width: 100px; height: 130px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.cart-item-details { flex: 1; }
+
+.cart-item-brand {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.cart-item-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.2s;
+  margin-bottom: 4px;
+}
+
+.cart-item-name:hover { color: var(--gold); }
+
+.cart-qty-control {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--dark3);
+  border: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.qty-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  width: 36px; height: 36px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.qty-btn:hover { background: var(--dark2); color: var(--gold); }
+
+.qty-val {
+  min-width: 40px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  border-left: var(--border);
+  border-right: var(--border);
+  line-height: 36px;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: none;
+  border: none;
+  color: var(--gray);
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 4px 8px;
+}
+
+.remove-btn:hover { color: var(--red); }
+
+.cart-summary {
+  background: var(--dark2);
+  border: var(--border-gold);
+  border-radius: var(--radius);
+  padding: 28px;
+  position: sticky;
+  top: 100px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 14px;
+  color: var(--gray);
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: var(--border);
+  padding-top: 16px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .cart-layout { grid-template-columns: 1fr; }
+  .cart-summary { position: static; }
+}
