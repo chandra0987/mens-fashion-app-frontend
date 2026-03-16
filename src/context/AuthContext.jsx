@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
 
       const { data } = await axios.post(
-        "http://localhost:3020/api/auth/register",
+        "https://backend-fshion-1.onrender.com/api/auth/register",
         formData
       );
 
@@ -59,7 +59,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
 
       const  response = await axios.post(
-        "http://localhost:3020/api/auth/login",
+        "https://backend-fshion-1.onrender.com/api/auth/login",
         formData
       );
 console.log('Login response:', response.data);
