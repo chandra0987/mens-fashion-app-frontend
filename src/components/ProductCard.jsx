@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { toast } from 'react-toastify';
-// import './ProductCard.css';
+import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
   const { toggleWishlist, isInWishlist } = useCart();
